@@ -5,14 +5,28 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import 'hammerjs';
+
+// Import the Animations module
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Import the ButtonsModule
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import { MyChartComponent } from './my-chart.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ChartsModule,
+    BrowserAnimationsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
